@@ -4,14 +4,11 @@ import Book from './Book'
 class BookShelf extends Component {
   render() {
     return(
-      <div className="bookshelf">
-        <h2 className="bookshelf-title">Currently Reading</h2>
+      <ol className="books-grid">
         <div className="bookshelf-books">
-          <ol className="books-grid">
-            <Book />
-          </ol>
+          <Book />
         </div>
-      </div>
+      </ol>
     )
   }
 }

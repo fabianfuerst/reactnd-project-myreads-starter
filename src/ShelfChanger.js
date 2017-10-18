@@ -16,5 +16,4 @@ class ShelfChanger extends Component {
   }
 }
 
-
 export default ShelfChanger
