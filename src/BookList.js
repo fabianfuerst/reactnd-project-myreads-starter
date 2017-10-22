@@ -11,7 +11,7 @@ class BookList extends Component {
       {type: 'currentlyReading', title: 'Currently Reading'},
       {type: 'wantToRead', title: 'Want to Read'},
       {type: 'read', title: 'Read'}]
-    const { books } = this.props
+    const { books, changeShelf } = this.props
     return (
       <div className='list-books-content'>
         {bookShelfs.map( (shelf) =>
@@ -20,8 +20,9 @@ class BookList extends Component {
             <div className="list-books-content">
               <div>
                 <BookShelf
-                books= { books }
-                shelf = { shelf }/>
+                books={ books }
+                shelf={ shelf }
+                changeShelf={ changeShelf }/>
               </div>
             </div>
           </div>
