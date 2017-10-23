@@ -14,8 +14,8 @@ class BookList extends Component {
     const { books, changeShelf } = this.props
     return (
       <div className='list-books-content'>
-        {bookShelfs.map( (shelf) =>
-          <div className="bookshelf" id={shelf.type}>
+        {bookShelfs.map( (shelf, index) =>
+          <div className="bookshelf" key={index}>
             <h2 className="bookshelf-title">{shelf.title}</h2>
             <div className="list-books-content">
               <div>

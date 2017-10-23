@@ -13,7 +13,6 @@ class BooksApp extends React.Component {
   componentDidMount() {
     BooksAPI.getAll().then((books) => {
       this.setState({books})
-      console.log(books)
     })
   }
 
@@ -23,8 +22,11 @@ class BooksApp extends React.Component {
 
       var updatedBooks = this.state.books.filter( book => book.id !== updatedBook.id)
 
-      updatedBooks.push(updatedBook)
-      this.setState({ books : updatedBooks })
+      this.setState(() => {
+        return(
+          updatedBooks.concat(updatedBook)
+        )
+      })
     })
   }
 
